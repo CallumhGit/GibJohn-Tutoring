@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/indexstyle.css')}}">
+  <title>GibJohn Tutoring - Home</title>
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <div class="Logo">
+        <a href="/"><img src="/static/css/images/MotarboardIcon.png" alt="Mk-COllege"></a>
+        <h1 class="logo-text">GibJohn Tutoring</h1>
+      </div>
+      <div class="nav-links">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+
+        <ul>
+          <li><a href="">FAQs</a></li>
+          <li><a href="https://mkcollege.ac.uk/contact-us/">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+  <div class=center_text_dash>GibJohn Tutoring</div>
+  <div class="center_text_subheading">A Place For All Your Educational Needs!</div>
+  <div class="buttons">
+    <a href="{{url_for('login')}}">Login</a>
+
+    <a href="{{url_for('register')}}">Register</a>
+  </div>
+
+
+
+  <script>
+
+    var navLinks = document.getElementById('navLinks');
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = '-200px';
+    }
+  </script>
+
+</body>
+
+</html>

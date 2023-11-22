@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/dashboardstyle.css')}}">
+  <title>Events - MK College</title>
+
+  <script src="https://kit.fontawesome.com/f9dbeb363a.js" crossorigin="anonymous"></script>
+
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <section class="header">
+    <nav>
+      <a href="dashboard.html"><img src="/static/css/images/whiteMk.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+
+        <ul>
+          <li><a href="">EVENTS</a></li>
+          <li><a href="">PROFILE</a></li>
+          <li><a href="/logout">LOGOUT</a></li>
+          <li><a href="https://mkcollege.ac.uk/contact-us/">CONTACT US</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick='showMenu()'></i>
+    </nav>
+  </section>
+
+  <section class="eventsInfo">
+    <h1>Our events are the perfect opportunity for you to come and showcase your skills</h1>
+  </section>
+
+
+
+
+
+  <script>
+
+    var navLinks = document.getElementById('navLinks');
+
+    function showMenu() {
+      navLinks.style.right = "0";
+    }
+
+    function hideMenu() {
+      navLinks.style.right = '-200px';
+    }
+  </script>
+</body>
+
+</html>

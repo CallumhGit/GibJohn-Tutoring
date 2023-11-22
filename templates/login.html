@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename = 'css/indexstyle.css')}}">
+  <title>GibJohn Tutoring - Login </title>
+</head>
+
+<body>
+
+  <section class="header">
+    <nav>
+      <div class="Logo">
+        <a href="/"><img src="/static/css/images/MotarboardIcon.png"></a>
+        <h1 class="logo-text">GibJohn Tutoring</h1>
+      </div>
+      <div class="nav-links">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+
+        <ul>
+          <li><a href="">FAQs</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+
+
+  <div class="center_text"><a href="/">Login</a></div>
+
+  <div class="form-container">
+    <div class="error">
+      {% if form.errors %}
+      {% for field, errors in form.errors.items() %}
+      {% for error in errors %}
+      {{ error }}
+      {% endfor %}
+      {% endfor %}
+      {% endif %}
+    </div>
+
+    <form action="" method="post">
+      {{form.hidden_tag()}}
+      {{ form.username}}
+      {{form.password}}
+      {{form.submit}}
+    </form>
+  </div>
+
+  <div class="buttons">
+    <a href="{{url_for('login')}}">Login</a>
+
+    <a href="{{url_for('register')}}">Register</a>
+  </div>
+
+</body>
+
+</html>
