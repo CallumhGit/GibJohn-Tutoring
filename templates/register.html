@@ -5,13 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{url_for('static', filename = 'css/indexstyle.css')}}">
-  <title>Document</title>
+  <title>Register - GibJohn Tutoring</title>
 </head>
 
 <body>
   <section class="header">
     <nav>
-      <a href="/"><img src="/static/css/images/whiteMk.png" alt="Mk-"></a>
+      <a href="/"><img src="/static/css/images/MotarboardIcon.png" ></a>
+      <h1 class="logo-text">GibJohn Tutoring</h1>
       <div class="nav-links">
         <i class="fa fa-times" onclick="hideMenu()"></i>
 
@@ -24,7 +25,7 @@
   </section>
 
 
-  <div class="center_text"><a href="/">Register</a></div>
+  <div class="center_text_reg"><a href="/">Register</a></div>
   <div class="buttons">
     <a href="{{url_for('login')}}">Login</a>
 
@@ -32,39 +33,36 @@
   </div>
 
   <div class="form-container">
-    <div class="error">
-
-      {% if form.errors %}
-
-      {% for field, errors in form.errors.items() %}
-
-      {% for error in errors %}
-
-      {{ error }}
-
-      {% endfor %}
-
-      {% endfor %}
-
-      {% endif %}
-
-    </div>
-
-
-
     <form action="" method="post">
 
-      {{ form.hidden_tag() }}
+      <div>{{ form.hidden_tag() }}</div>
 
-      {{ form.username }}
+      <div class = "username_field">{{ form.username }}</div>
 
-      {{ form.password }}
+      <div class = "password_field">{{ form.password }}</div>
 
-      {{ form.confirm }}
-
-      {{ form.submit }}
+      <div class="password_field">{{ form.confirm }}</div>
+      <div class="submit_button">{{ form.submit }}</div>
 
     </form>
+  </div>
+
+  <div class="error">
+
+    {% if form.errors %}
+
+    {% for field, errors in form.errors.items() %}
+
+    {% for error in errors %}
+
+    {{ error }}
+
+    {% endfor %}
+
+    {% endfor %}
+
+    {% endif %}
+
   </div>
 </body>
 

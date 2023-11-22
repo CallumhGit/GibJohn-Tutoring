@@ -13,7 +13,7 @@
 body {
   z-index: 1;
   font-family: 'Young Serif', serif;
-  background-image: linear-gradient(215deg, #34C2FF 0%, #D7DBDD 101.77%);
+  background-image: linear-gradient(215deg, #505152 0%, #D7DBDD 101.77%);
   height: 100vh;
 }
 
@@ -85,10 +85,22 @@ a {
   font-size: 3.5rem;
   color: rgb(255, 255, 255);
   position: absolute;
-  left: 50%;
+  left: 51%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
 }
+
+.center_text_reg{
+  z-index: 100;
+  text-align: center;
+  font-size: 3.5rem;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  left: 51%;
+  top: 50%;
+  transform: translate(-50%, -65%);
+}
+
 
 
 .buttons {
@@ -130,7 +142,35 @@ a {
 }
 
 .form-container {
-  display: flex;
   justify-content: center;
-  transform: translate(0%, 2500%);
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%,-50%);
+
+}
+
+input{
+  width: 100%;
+  padding: 10px 12px;
+  border: 3px solid #454746;
+  border-radius: 6px;
+  margin: 2px;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  width: 114%;
+  background-color: #454746;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.error{
+  justify-content: center;
+  color: rgb(51, 19, 19);
+  position: absolute;
 }
