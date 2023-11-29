@@ -6,7 +6,7 @@
 
 * {
   padding: 0%;
-  font-family: 'Poppins', sans-serif;
+
 
 }
 
@@ -14,6 +14,7 @@ body {
   z-index: 1;
   background-image: linear-gradient(215deg, #505152 0%, #D7DBDD 101.77%);
   height: 100vh;
+  font-family: 'Poppins', sans-serif;
 }
 
 .header img {
@@ -29,10 +30,11 @@ body {
 
 }
 
-#logo-text {
+.logo-text {
   font-family: 'Jim Nightshade', sans-serif;
-  font-size: 1.5rem;
-  color: white
+  font-size: 2rem;
+  color: white;
+  font-weight: 700;
 }
 
 
@@ -89,7 +91,7 @@ a {
   transform: translate(-50%, -40%);
 }
 
-.center_text_reg{
+.center_text_reg {
   z-index: 100;
   text-align: center;
   font-size: 3.5rem;
@@ -145,11 +147,11 @@ a {
   position: absolute;
   left: 50%;
   top: 60%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
 
 }
 
-input{
+input {
   width: 100%;
   padding: 10px 12px;
   border: 3px solid #454746;
@@ -157,7 +159,9 @@ input{
   margin: 2px;
 }
 
-input[type=button], input[type=submit], input[type=reset] {
+input[type=button],
+input[type=submit],
+input[type=reset] {
   width: 114%;
   background-color: #454746;
   border: none;
@@ -168,28 +172,28 @@ input[type=button], input[type=submit], input[type=reset] {
   cursor: pointer;
 }
 
-.error{
+.error {
   justify-content: center;
   color: rgb(51, 19, 19);
   position: absolute;
 }
 
 
-@media screen and (max-width: 450px){
-  .logo-text{
+@media screen and (max-width: 450px) {
+  .logo-text {
     font-size: 1.5rem;
   }
 
-  .center_text_dash{
+  .center_text_dash {
     font-size: 1.5rem;
   }
 
-  .center_text_subheading{
+  .center_text_subheading {
     font-size: 1rem;
 
   }
 
-  .center_text{
+  .center_text {
     z-index: 100;
     text-align: center;
     font-size: 3.5rem;
@@ -199,7 +203,7 @@ input[type=button], input[type=submit], input[type=reset] {
     transform: translate(-50%, -40%);
   }
 
-  .center_text_reg{
+  .center_text_reg {
     z-index: 100;
     text-align: center;
     font-size: 3.5rem;
@@ -209,34 +213,34 @@ input[type=button], input[type=submit], input[type=reset] {
     transform: translate(-50%, -40%);
   }
 
-  .form-container-reg{
+  .form-container-reg {
     justify-content: center;
     position: absolute;
     left: 50%;
     top: 65%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
 
 @media screen and (min-width: 750px) {
-  
-  .center_text{
+
+  .center_text {
     font-size: 2.5rem;
     top: 42%;
     left: 52%;
   }
 
-  .center_text_reg{
+  .center_text_reg {
     top: 47%;
     left: 52%;
 
   }
 
-  .form-container-reg{
+  .form-container-reg {
     justify-content: center;
     position: absolute;
     left: 50%;
     top: 65%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 }
