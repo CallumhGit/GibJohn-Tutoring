@@ -118,7 +118,7 @@ nav h1 {
   transform: translate(-50%, -40%);
 }
 
-.center_text_reg {
+.center_text_reg a {
   z-index: 100;
   text-align: center;
   font-size: 3.5rem;
@@ -127,6 +127,7 @@ nav h1 {
   left: 51%;
   top: 50%;
   transform: translate(-50%, -65%);
+  text-decoration: none;
 }
 
 
