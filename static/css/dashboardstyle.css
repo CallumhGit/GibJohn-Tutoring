@@ -10,7 +10,7 @@
 
 
 body {
-  background-image: linear-gradient(215deg, #505152 0%, #D7DBDD 101.77%);
+  background-color: red;
   height: 100vh;
   width: 100%;
 }
