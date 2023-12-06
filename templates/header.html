@@ -1,29 +1,36 @@
-<section class="header">
+<header>
   <div class="logo">
-    <a href="/"><i class="fa-solid fa-graduation-cap"></i>>GibJohn Tutoring</a>
+    <a href="/" class="color-effect"><i class="fa-solid fa-graduation-cap"></i>>GibJohn Tutoring</a>
   </div>
-  <div class="main-buttons">
-    <div class="hamburger">
-      <i class="fa-solid fa-bars"></i>
-    </div>
-    <nav class="nav-bar">
-      <ul>
-        <li><a href="/" class="active">HOME</a></li>
-        <li><a href="/login">LOGIN OR REGISTER</a></li>
-        <li><a href="">PRICING</a></li>
-        <li><a href="">FAQs</a></li>
-        <li><a href="https://mkcollege.ac.uk/contact-us/">CONTACT-US</a></li>
-      </ul>
+  <div class="nav-links" id="navLinks">
+    <i class="fa fa-times" onclick="hideMenu()"></i>
+    <ul>
+      <li><a href="">HOME</a></li>
+      <li><a href="">CONTACT US</a></li>
+      <li><a href="">TUTORS</a></li>
+    </ul>
   </div>
-  </nav>
+  <i class="fa fa-bars" onclick='showMenu()'></i>
   </div>
-</section>
+  <div class="buttons">
+    <a href="{{url_for('login')}}">Login</a>
+
+    <a href="{{url_for('register')}}">Register</a>
+  </div>
+  </div>
+</header>
 
 
 <script>
-  hamburger = document.querySelector(".hamburger");
-  hamburger.onclick = function () {
-    navBar = document.querySelector(".nav-bar");
-    navBar.classList.toggle("active");
+
+  var navLinks = document.getElementById('navLinks');
+
+  function showMenu() {
+    navLinks.style.right = "0";
   }
+
+  function hideMenu() {
+    navLinks.style.right = '-200px';
+  }
+</script>
 </script>

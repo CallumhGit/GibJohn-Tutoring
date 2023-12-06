@@ -1,9 +1,9 @@
 :root {
-  --background-color: #fff;
-  --text-colour: #fff;
-  --primary-color: #718BA2;
-  --secondary-color: #aebecd;
-  --accent-color: #7f9bb6;
-
+  --background-color: #F6FBFD;
+  --text-colour: #050F13;
+  --primary-color: #38ACCB;
+  --secondary-color: #9793E3;
+  --accent-color: #8C71DA;
+  --color-effect: linear-gradient(120deg, var(--primary), var(--accent));
 
 }
