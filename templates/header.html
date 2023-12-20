@@ -1,19 +1,19 @@
 <header>
   <div class="logo">
-    <a href="/" class="color-effect"><i class="fa-solid fa-graduation-cap"></i>>GibJohn Tutoring</a>
+    <a href="/" id="color-effect"><i class="fa-solid fa-graduation-cap"></i>>GibJohn Tutoring</a>
   </div>
   <div class="nav-links" id="navLinks">
     <i class="fa fa-times" onclick="hideMenu()"></i>
     <ul>
-      <li><a href="">HOME</a></li>
-      <li><a href="">CONTACT US</a></li>
-      <li><a href="">TUTORS</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="">Contact Us</a></li>
+      <li><a href="">Tutors</a></li>
     </ul>
   </div>
   <i class="fa fa-bars" onclick='showMenu()'></i>
   </div>
   <div class="buttons">
-    <a href="{{url_for('login')}}">Login</a>
+    <a href="{{url_for('login')}}"><i class="fa-solid fa-user" id="color-effect"></i>Sign In</a>
 
     <a href="{{url_for('register')}}">Register</a>
   </div>
@@ -32,5 +32,4 @@
   function hideMenu() {
     navLinks.style.right = '-200px';
   }
-</script>
 </script>

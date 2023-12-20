@@ -1,69 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
+{% block title_extension %} - Home{% endblock %}
+{% block preface_body %}
+{% include 'header.html' %}
+{% endblock %}
+{% block content %}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{{url_for('static', filename = 'css/indexstyle.css')}}">
-  <title>Register - GibJohn Tutoring</title>
-</head>
+<div class="form-container">
+  <form action="" method="post">
+    <h2 class="form-title"><a href=""></a>Register</h2>
 
-<body>
-  <section class="header">
-    <nav>
-      <a href="/"><img src="/static/css/images/MotarboardIcon.png" ></a>
-      <h1 class="logo-text">GibJohn Tutoring</h1>
-      <div class="nav-links">
-        <i class="fa fa-times" onclick="hideMenu()"></i>
+    <div>{{ form.hidden_tag() }}</div>
 
-        <ul>
-          <li><a href="">FAQs</a></li>
-          <li><a href="https://mkcollege.ac.uk/contact-us/">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>
-  </section>
+    <div class="username_field">{{ form.username }}</div>
 
+    <div class="password_field">{{ form.password }}</div>
 
-  <div class="center_text_reg"><a href="/">Register</a></div>
-  <div class="buttons">
-    <a href="{{url_for('login')}}">Login</a>
+    <div class="password_field">{{ form.confirm }}</div>
+    <div class="submit_button">{{ form.submit }}</div>
 
-    <a href="{{url_for('register')}}">Register</a>
-  </div>
+  </form>
+</div>
 
-  <div class="form-container-reg">
-    <form action="" method="post">
+<div class="error">
 
-      <div>{{ form.hidden_tag() }}</div>
+  {% if form.errors %}
 
-      <div class = "username_field">{{ form.username }}</div>
+  {% for field, errors in form.errors.items() %}
 
-      <div class = "password_field">{{ form.password }}</div>
+  {% for error in errors %}
 
-      <div class="password_field">{{ form.confirm }}</div>
-      <div class="submit_button">{{ form.submit }}</div>
+  {{ error }}
 
-    </form>
-  </div>
+  {% endfor %}
 
-  <div class="error">
+  {% endfor %}
 
-    {% if form.errors %}
+  {% endif %}
 
-    {% for field, errors in form.errors.items() %}
-
-    {% for error in errors %}
-
-    {{ error }}
-
-    {% endfor %}
-
-    {% endfor %}
-
-    {% endif %}
-
-  </div>
-</body>
-
-</html>
+</div>
+{% endblock %}
